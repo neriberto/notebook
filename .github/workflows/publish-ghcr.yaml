@@ -1,0 +1,17 @@
+name: Docker Image CI for GHCR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push the image
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker build . -t ghcr.io/${{ github.repository }}/docker-image-ci:latest
+          docker push ghcr.io/${{ github.repository }}/docker-image-ci:latest
