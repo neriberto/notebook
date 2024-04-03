@@ -11,3 +11,6 @@ dremio-simple-query==0.0.4
 pandas==2.2.1
 polars==0.20.18
 duckdb==0.10.1
+
+# utils
+faker==24.4.0
