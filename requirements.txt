@@ -14,3 +14,7 @@ duckdb==0.10.1
 
 # utils
 faker==24.4.0
+
+# Atualiza e ajusta compatibilidade com o pandas
+numexpr-2.10.0
+pandas==2.2.1
