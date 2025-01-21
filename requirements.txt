@@ -11,7 +11,7 @@ sqlalchemy_dremio==3.0.4
 dremio-simple-query==0.0.4
 pandas==2.2.2
 polars==1.5.0
-duckdb==1.0.0
+duckdb==1.1.0
 
 # utils
 Faker==28.0.0
